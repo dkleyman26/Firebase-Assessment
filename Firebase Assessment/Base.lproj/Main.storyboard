@@ -139,20 +139,20 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VCt-1W-mME">
-                                <rect key="frame" x="152.5" y="293" width="70" height="70"/>
+                                <rect key="frame" x="112.5" y="293" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="bx0-oa-vDw"/>
-                                    <constraint firstAttribute="height" constant="70" id="qrf-Sh-QXF"/>
+                                    <constraint firstAttribute="width" constant="150" id="bx0-oa-vDw"/>
+                                    <constraint firstAttribute="height" constant="150" id="qrf-Sh-QXF"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Date and Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nt7-s4-VCW">
-                                <rect key="frame" x="24" y="371" width="327" height="30"/>
+                                <rect key="frame" x="24" y="451" width="327" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fid-nN-tR9">
-                                <rect key="frame" x="24" y="441" width="327" height="30"/>
+                                <rect key="frame" x="24" y="521" width="327" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Za1-Vv-U9c"/>
                                 </constraints>

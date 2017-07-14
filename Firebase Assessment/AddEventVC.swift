@@ -173,16 +173,21 @@ class AddEventVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         
         actionsheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
+        imagePickerController.allowsEditing = false
+        
         self.present(actionsheet, animated: true, completion: nil)
         
     }
     
     // image picker delegate functions
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         
-        self.importedImage.image = image
         
+        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
+            self.importedImage.image = selectedImage
+        }else{
+            print("Error")
+        }
         picker.dismiss(animated: true, completion: nil)
     }
     
