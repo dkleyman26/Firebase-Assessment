@@ -10,7 +10,9 @@ import UIKit
 import Firebase
 
 protocol DataEditingDelegate {
+    // user did input data delegate
     func userDidInputData(event: Event)
+    // configure the events array
     func configureEventsDatabase()
 }
 
