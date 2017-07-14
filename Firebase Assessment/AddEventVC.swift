@@ -16,7 +16,6 @@ protocol DataEditingDelegate {
 
 class AddEventVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    
     //declaration of variables
     var ref: DatabaseReference!
 
@@ -41,7 +40,6 @@ class AddEventVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     var myIndex = 0
     var identifier: String? = nil
     //
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +67,6 @@ class AddEventVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             identifier = nil
         }
     }
-    
     
     //date picker initializer
     func donePressed(){
@@ -109,7 +106,6 @@ class AddEventVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         ref.child(key).setValue(event)
     }
     
-    
     //updating event to datatbase
     func updateEvent(id: String, name: String, address: String, price: String, dateAndTime: String){
         let event =
@@ -123,7 +119,6 @@ class AddEventVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         ref.child(id).setValue(event)
         
     }
-    
     
     //observing database and gathering event json
     func observe(){
@@ -140,19 +135,15 @@ class AddEventVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
                             let address = event?["address"] as! String
                             let price = event?["price"] as! String
                             let dateAndTime = event?["date and time"] as! String
-                            let tempEvent = Event(name: name, image: #imageLiteral(resourceName: "NoImage") , price: price, address: address, time: dateAndTime)
+                            let tempEvent = Event(name: name, price: price, address: address, time: dateAndTime)
                             tempEvent.setID(id: id)
                             self.delegate?.userDidInputData(event: tempEvent)
-                            
                         }
                     }
-                    
                 }
-                
             }
         })
     }
-    
     
     // deleting event from database
     func deleteEvent(id: String){
@@ -166,7 +157,7 @@ class AddEventVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         
-        let actionsheet = UIAlertController(title: "Photo", message: "Choose a photo source", preferredStyle: .actionSheet)
+        let actionsheet = UIAlertController(title: "Photo", message: "Choose a Photo Source", preferredStyle: .actionSheet)
         
         actionsheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action) in
             imagePickerController.sourceType = .camera
@@ -221,6 +212,5 @@ class AddEventVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         self.navigationController?.popViewController(animated: true)
         deleteEvent(id: (desiredEventToBeUpdated?.id)!)
     }
-    
 
 }

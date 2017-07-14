@@ -59,9 +59,8 @@ class Event{
         }
     }
     
-    init(name: String, image: UIImage, price: String, address: String, time: String){
+    init(name: String, price: String, address: String, time: String){
         self._name = name
-        self._image = image
         self._price = price
         self._address = address
         self._time = time
@@ -70,6 +69,5 @@ class Event{
     func setID(id: String){
         self.id = id
     }
-    
     
 }

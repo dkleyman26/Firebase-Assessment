@@ -10,7 +10,6 @@ import UIKit
 
 class EventListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, DataEditingDelegate {
 
-    
     //declaration of variables
     @IBOutlet weak var tableView: UITableView!
     var events = [Event]()
@@ -28,7 +27,6 @@ class EventListVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         tableView.reloadData()
         
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
@@ -77,7 +75,6 @@ class EventListVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         desiredEventToBeUpdated = events[indexPath.row]
         performSegue(withIdentifier: "segue", sender: events[indexPath.row])
     }
-
     
 }
 
