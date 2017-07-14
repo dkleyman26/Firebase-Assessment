@@ -29,6 +29,7 @@ class EventListVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
@@ -77,6 +78,6 @@ class EventListVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         performSegue(withIdentifier: "segue", sender: events[indexPath.row])
     }
 
-
+    
 }
 

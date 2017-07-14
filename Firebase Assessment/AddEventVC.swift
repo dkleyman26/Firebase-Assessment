@@ -48,7 +48,6 @@ class AddEventVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
 
         ref = Database.database().reference().child("events")
         observe()
-        importedImage.image = #imageLiteral(resourceName: "NoImage")
         createDatePicker()
         
         importedImage.layer.cornerRadius = view.frame.height/2
@@ -111,7 +110,7 @@ class AddEventVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     }
     
     
-    //updatting event to datatbase
+    //updating event to datatbase
     func updateEvent(id: String, name: String, address: String, price: String, dateAndTime: String){
         let event =
             ["id": id,
@@ -122,6 +121,7 @@ class AddEventVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             ] as [String : AnyObject]
         
         ref.child(id).setValue(event)
+        
     }
     
     
@@ -188,7 +188,7 @@ class AddEventVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         
-        importedImage.image = image
+        self.importedImage.image = image
         
         picker.dismiss(animated: true, completion: nil)
     }

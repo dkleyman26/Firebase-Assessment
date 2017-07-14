@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,16 +20,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Q6I-Z1-hTd">
-                        <rect key="frame" x="66" y="11" width="238" height="20.5"/>
+                        <rect key="frame" x="66" y="11" width="246" height="20.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDk-V5-UR8">
-                                <rect key="frame" x="0.0" y="0.0" width="178" height="20.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="186" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6n-UZ-TTw">
-                                <rect key="frame" x="178" y="0.0" width="60" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6n-UZ-TTw">
+                                <rect key="frame" x="186" y="0.0" width="60" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="nJv-vk-ife"/>
                                 </constraints>
@@ -40,7 +40,7 @@
                         </subviews>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date and Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhP-II-Xlb">
-                        <rect key="frame" x="66" y="33" width="238" height="20.5"/>
+                        <rect key="frame" x="66" y="33" width="230" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -58,8 +58,8 @@
                     <constraint firstItem="VhP-II-Xlb" firstAttribute="top" secondItem="Q6I-Z1-hTd" secondAttribute="bottom" constant="2" id="C1W-FL-hF7"/>
                     <constraint firstItem="FfC-wC-jNZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="SOB-Hp-BXd"/>
                     <constraint firstItem="Q6I-Z1-hTd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="VZk-hK-rGg"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="VhP-II-Xlb" secondAttribute="trailing" constant="8" id="XCI-vt-Di3"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="Q6I-Z1-hTd" secondAttribute="trailing" constant="8" id="b2N-GZ-XZd"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="VhP-II-Xlb" secondAttribute="trailing" constant="16" id="XCI-vt-Di3"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Q6I-Z1-hTd" secondAttribute="trailing" id="b2N-GZ-XZd"/>
                     <constraint firstItem="Q6I-Z1-hTd" firstAttribute="leading" secondItem="FfC-wC-jNZ" secondAttribute="trailing" constant="8" id="tpm-id-jNj"/>
                     <constraint firstItem="FfC-wC-jNZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="wJj-4c-f12"/>
                 </constraints>

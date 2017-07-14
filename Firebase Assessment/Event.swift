@@ -29,7 +29,7 @@ class Event{
     
     var image: UIImage{
         if _image == nil{
-            return UIImage(named: "NoImage")!
+            return #imageLiteral(resourceName: "NoImage")
         }else{
             return _image
         }
