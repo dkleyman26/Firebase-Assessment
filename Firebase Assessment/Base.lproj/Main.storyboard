@@ -162,6 +162,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Nt7-s4-VCW" secondAttribute="trailing" constant="8" id="2Vw-xF-Slu"/>
                             <constraint firstItem="VCt-1W-mME" firstAttribute="top" secondItem="UV6-cc-s0c" secondAttribute="bottom" constant="8" id="F6t-H6-ox1"/>
@@ -181,6 +182,9 @@
                             <constraint firstItem="CHe-Ys-PaJ" firstAttribute="top" secondItem="UuW-v1-cdJ" secondAttribute="bottom" constant="8" id="jzp-S4-fdR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ql0-ac-4uz" secondAttribute="trailing" constant="8" id="vPG-h7-wV6"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="gK3-C5-wF3" appends="YES" id="Q2e-M5-crv"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="addressTF" destination="pMC-Ie-S6C" id="Z39-Wi-uQj"/>
@@ -193,6 +197,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16E-Ji-6H0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gK3-C5-wF3">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="WIt-yt-s8x" id="Pgm-B3-cDh"/>
+                        <outlet property="delegate" destination="WIt-yt-s8x" id="9En-J9-fVK"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2015.625" y="124.64788732394366"/>
         </scene>

@@ -219,5 +219,12 @@ class AddEventVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         self.navigationController?.popViewController(animated: true)
         deleteEvent(id: (desiredEventToBeUpdated?.id)!)
     }
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        nameTF.resignFirstResponder()
+        addressTF.resignFirstResponder()
+        priceTF.resignFirstResponder()
+    }
+    
 
 }
